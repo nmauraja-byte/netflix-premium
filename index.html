@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Netflix Premium Murah</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link
-href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-rel="stylesheet"
-/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -29,7 +26,7 @@ body{
   overflow-x:hidden;
 }
 
-/* LOADING */
+/* LOADER */
 
 .loader{
   position:fixed;
@@ -44,8 +41,8 @@ body{
 
 .loader h1{
   color:#e50914;
-  font-size:50px;
-  letter-spacing:5px;
+  font-size:55px;
+  letter-spacing:8px;
   animation:pulse 1.2s infinite;
 }
 
@@ -55,7 +52,7 @@ body{
   100%{opacity:0.5;}
 }
 
-/* BACKGROUND VIDEO */
+/* BACKGROUND */
 
 .bg-video{
   position:fixed;
@@ -74,19 +71,17 @@ body{
   background:linear-gradient(
     to bottom,
     rgba(0,0,0,0.7),
-    rgba(0,0,0,0.92)
+    rgba(0,0,0,0.96)
   );
   z-index:-2;
 }
 
-/* GLOW */
-
 .glow{
   position:fixed;
-  width:500px;
-  height:500px;
+  width:600px;
+  height:600px;
   background:#e50914;
-  filter:blur(180px);
+  filter:blur(220px);
   opacity:0.18;
   top:-150px;
   right:-100px;
@@ -101,7 +96,7 @@ body{
 }
 
 .container{
-  max-width:520px;
+  max-width:540px;
   margin:auto;
   padding:20px;
 }
@@ -114,8 +109,8 @@ body{
 }
 
 .logo{
-  width:95px;
-  margin-bottom:15px;
+  width:100px;
+  margin-bottom:18px;
   filter:drop-shadow(0 0 15px rgba(229,9,20,0.7));
 }
 
@@ -131,9 +126,9 @@ body{
 }
 
 h1{
-  font-size:35px;
+  font-size:38px;
   line-height:1.3;
-  margin-bottom:14px;
+  margin-bottom:15px;
 }
 
 .gradient{
@@ -144,16 +139,36 @@ h1{
 
 .desc{
   color:#d0d0d0;
-  line-height:1.8;
+  line-height:1.9;
   font-size:15px;
 }
-
-/* VIEWER COUNTER */
 
 .viewer{
   margin-top:20px;
   color:#00ff99;
   font-size:14px;
+}
+
+/* TRUST */
+
+.trust{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:25px;
+}
+
+.trust-box{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:18px;
+  padding:15px;
+  text-align:center;
+}
+
+.trust-box h3{
+  color:#00ff99;
+  margin-bottom:5px;
 }
 
 /* SLIDER */
@@ -163,29 +178,29 @@ h1{
   overflow:hidden;
   border-radius:25px;
   position:relative;
+  border:1px solid rgba(255,255,255,0.08);
 }
 
 .slides{
   display:flex;
   width:600%;
-  animation:slide 24s infinite;
+  animation:slide 30s infinite;
 }
 
 .slide{
   width:100%;
   flex-shrink:0;
   position:relative;
+  overflow:hidden;
 }
 
 .slide img{
   width:100%;
-  height:270px;
+  height:320px;
   object-fit:cover;
   display:block;
-  transition:0.4s;
+  transition:0.5s;
 }
-
-/* HOVER CINEMATIC */
 
 .slide:hover img{
   transform:scale(1.08);
@@ -196,30 +211,13 @@ h1{
   position:absolute;
   bottom:0;
   width:100%;
-  padding:18px;
+  padding:20px;
   background:linear-gradient(
     transparent,
-    rgba(0,0,0,0.95)
+    rgba(0,0,0,0.96)
   );
   font-weight:600;
-  font-size:18px;
-}
-
-.play-btn{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  width:70px;
-  height:70px;
-  border-radius:50%;
-  background:rgba(229,9,20,0.9);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:30px;
-  cursor:pointer;
-  box-shadow:0 0 20px rgba(229,9,20,0.6);
+  font-size:19px;
 }
 
 @keyframes slide{
@@ -245,18 +243,23 @@ h1{
 /* CARD */
 
 .card{
-  margin-top:25px;
+  margin-top:28px;
   background:rgba(255,255,255,0.05);
   border:1px solid rgba(255,255,255,0.08);
   border-radius:24px;
-  padding:22px;
+  padding:24px;
   backdrop-filter:blur(12px);
 }
 
+.old-price{
+  text-decoration:line-through;
+  color:#888;
+}
+
 .price{
-  font-size:38px;
+  font-size:45px;
   color:#00ff99;
-  font-weight:700;
+  font-weight:800;
   margin:15px 0;
 }
 
@@ -266,13 +269,23 @@ h1{
   font-size:14px;
 }
 
+.bonus{
+  margin-top:18px;
+  background:rgba(229,9,20,0.08);
+  border:1px solid rgba(229,9,20,0.2);
+  padding:15px;
+  border-radius:18px;
+  color:#ffb3b7;
+  font-size:14px;
+}
+
 /* BUTTON */
 
 .btn{
   display:block;
   width:100%;
   margin-top:18px;
-  padding:16px;
+  padding:17px;
   border-radius:18px;
   text-decoration:none;
   text-align:center;
@@ -299,13 +312,38 @@ h1{
   color:white;
 }
 
-/* TESTIMONI */
+/* FEATURES */
 
 .section-title{
-  margin-top:35px;
+  margin-top:40px;
   margin-bottom:18px;
-  font-size:22px;
+  font-size:24px;
 }
+
+.features-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
+
+.feature-card{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:20px;
+  padding:18px;
+}
+
+.feature-card h3{
+  margin-bottom:8px;
+}
+
+.feature-card p{
+  color:#bbb;
+  font-size:13px;
+  line-height:1.7;
+}
+
+/* TESTI */
 
 .testi{
   background:rgba(255,255,255,0.05);
@@ -332,28 +370,34 @@ h1{
   font-size:13px;
 }
 
-/* QRIS */
+/* FAQ */
 
-.qris{
-  margin-top:35px;
-  text-align:center;
+.faq-item{
+  background:rgba(255,255,255,0.05);
+  border-radius:18px;
+  padding:18px;
+  margin-bottom:12px;
+  border:1px solid rgba(255,255,255,0.08);
 }
 
-.qris img{
-  width:220px;
-  border-radius:20px;
-  margin-top:15px;
-  border:2px solid rgba(255,255,255,0.08);
+.faq-item h3{
+  margin-bottom:8px;
 }
 
-/* FLOAT BUTTON */
+.faq-item p{
+  color:#bbb;
+  font-size:13px;
+  line-height:1.8;
+}
+
+/* FLOAT WA */
 
 .float-wa{
   position:fixed;
   right:18px;
   bottom:20px;
-  width:65px;
-  height:65px;
+  width:68px;
+  height:68px;
   background:#25D366;
   border-radius:50%;
   display:flex;
@@ -362,9 +406,8 @@ h1{
   font-size:30px;
   text-decoration:none;
   color:white;
-  box-shadow:0 0 25px rgba(37,211,102,0.5);
+  box-shadow:0 0 30px rgba(37,211,102,0.5);
   z-index:999;
-  animation:floating 3s infinite;
 }
 
 /* LIVE ORDER */
@@ -380,23 +423,11 @@ h1{
   font-size:13px;
   color:#ddd;
   z-index:999;
-  animation:fadein 1s;
-}
-
-@keyframes fadein{
-  from{
-    opacity:0;
-    transform:translateY(20px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
 }
 
 footer{
   text-align:center;
-  margin:40px 0 15px;
+  margin:45px 0 20px;
   color:#777;
   font-size:13px;
 }
@@ -406,11 +437,19 @@ footer{
 @media(max-width:480px){
 
   h1{
-    font-size:29px;
+    font-size:31px;
   }
 
   .slide img{
     height:240px;
+  }
+
+  .trust{
+    grid-template-columns:1fr;
+  }
+
+  .features-grid{
+    grid-template-columns:1fr;
   }
 
 }
@@ -425,22 +464,13 @@ footer{
   <h1>NETFLIX</h1>
 </div>
 
-<!-- VIDEO BG -->
+<!-- BG VIDEO -->
 <video autoplay muted loop class="bg-video">
-  <source
-  src="https://cdn.coverr.co/videos/coverr-working-on-a-computer-5176/1080p.mp4"
-  type="video/mp4">
+  <source src="https://cdn.coverr.co/videos/coverr-working-on-a-computer-5176/1080p.mp4" type="video/mp4">
 </video>
 
 <div class="overlay"></div>
 <div class="glow"></div>
-
-<!-- MUSIC -->
-<audio autoplay loop>
-  <source
-  src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73467.mp3?filename=ambient-piano-logo-165357.mp3"
-  type="audio/mp3">
-</audio>
 
 <div class="container">
 
@@ -448,8 +478,8 @@ footer{
   <section class="hero">
 
     <img
-    class="logo"
-    src="https://upload.wikimedia.org/wikipedia/commons/7/75/Netflix_icon.svg"
+      class="logo"
+      src="https://upload.wikimedia.org/wikipedia/commons/7/75/Netflix_icon.svg"
     >
 
     <div class="badge">
@@ -464,13 +494,33 @@ footer{
     </h1>
 
     <p class="desc">
-      Mau nonton film premium tanpa bayar mahal?
-      Nikmati Netflix Full HD dengan akun aman,
-      anti ribet, dan fast respon.
+      Nikmati Netflix Premium Full HD/UHD
+      dengan harga hemat, aman dipakai,
+      dan support semua device.
     </p>
 
-    <div class="viewer">
+    <div class="viewer" id="viewerCount">
       👀 127 orang sedang melihat website ini
+    </div>
+
+    <!-- TRUST -->
+    <div class="trust">
+
+      <div class="trust-box">
+        <h3>3K+</h3>
+        Customer
+      </div>
+
+      <div class="trust-box">
+        <h3>24/7</h3>
+        Fast Respon
+      </div>
+
+      <div class="trust-box">
+        <h3>100%</h3>
+        Garansi
+      </div>
+
     </div>
 
   </section>
@@ -480,40 +530,82 @@ footer{
 
     <div class="slides">
 
+      <!-- 1 -->
       <div class="slide">
-        <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1200">
-        <div class="play-btn">▶</div>
-        <div class="movie-title">🇮🇩 Sore: Istri dari Masa Depan</div>
+
+        <img
+          src="https://image.tmdb.org/t/p/original/1XS1oqL89opfnbLl8WnZY1O1uJx.jpg"
+        >
+
+        <div class="movie-title">
+          🇰🇷 Squid Game
+        </div>
+
       </div>
 
+      <!-- 2 -->
       <div class="slide">
-        <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1200">
-        <div class="play-btn">▶</div>
-        <div class="movie-title">🇮🇩 Serangan Balik</div>
+
+        <img
+          src="https://image.tmdb.org/t/p/original/iHSwvRVsRyxpX7FE7GbviaDvgGZ.jpg"
+        >
+
+        <div class="movie-title">
+          🇺🇸 Wednesday
+        </div>
+
       </div>
 
+      <!-- 3 -->
       <div class="slide">
-        <img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?q=80&w=1200">
-        <div class="play-btn">▶</div>
-        <div class="movie-title">🇺🇸 Wednesday</div>
+
+        <img
+          src="https://image.tmdb.org/t/p/original/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg"
+        >
+
+        <div class="movie-title">
+          🇺🇸 Stranger Things
+        </div>
+
       </div>
 
+      <!-- 4 -->
       <div class="slide">
-        <img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?q=80&w=1200">
-        <div class="play-btn">▶</div>
-        <div class="movie-title">🇺🇸 Apex</div>
+
+        <img
+          src="https://image.tmdb.org/t/p/original/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg"
+        >
+
+        <div class="movie-title">
+          🇺🇸 Avengers Endgame
+        </div>
+
       </div>
 
+      <!-- 5 -->
       <div class="slide">
-        <img src="https://images.unsplash.com/photo-1518929458119-e5bf444c30f4?q=80&w=1200">
-        <div class="play-btn">▶</div>
-        <div class="movie-title">🇰🇷 Squid Game</div>
+
+        <img
+          src="https://image.tmdb.org/t/p/original/6MKr3KgOLmzOP6MSuZERO41Lpkt.jpg"
+        >
+
+        <div class="movie-title">
+          🇺🇸 John Wick
+        </div>
+
       </div>
 
+      <!-- 6 -->
       <div class="slide">
-        <img src="https://images.unsplash.com/photo-1519996529931-28324d5a630e?q=80&w=1200">
-        <div class="play-btn">▶</div>
-        <div class="movie-title">🇰🇷 Ballerina</div>
+
+        <img
+          src="https://image.tmdb.org/t/p/original/q719jXXEzOoYaps6babgKnONONX.jpg"
+        >
+
+        <div class="movie-title">
+          🇰🇷 All Of Us Are Dead
+        </div>
+
       </div>
 
     </div>
@@ -523,7 +615,11 @@ footer{
   <!-- PACKAGE -->
   <div class="card">
 
-    <h2>Paket Sharing</h2>
+    <h2>Paket Sharing Premium</h2>
+
+    <div class="old-price">
+      Rp80.000
+    </div>
 
     <div class="price">
       Rp25K
@@ -534,26 +630,60 @@ footer{
       ✔ Garansi Replace <br>
       ✔ Aman Dipakai <br>
       ✔ Support Semua Device <br>
-      ✔ Fast Respon Setiap Hari
+      ✔ Fast Respon Setiap Hari <br>
+      ✔ Login Tinggal Pakai
     </div>
 
-    <!-- GANTI NOMOR -->
+    <div class="bonus">
+      🎁 Bonus bantuan login sampai berhasil.
+    </div>
+
+    <!-- WA -->
     <a
-    class="btn wa"
-    href="https://wa.me/6282271462909"
-    target="_blank"
+      class="btn wa"
+      href="https://wa.me/6282271462909"
+      target="_blank"
     >
       📱 Order via WhatsApp
     </a>
 
-    <!-- GANTI USERNAME -->
+    <!-- IG -->
     <a
-    class="btn ig"
-    href="https://instagram.com/noval_mauraja"
-    target="_blank"
+      class="btn ig"
+      href="https://instagram.com/noval_mauraja"
+      target="_blank"
     >
       📸 Instagram Store
     </a>
+
+  </div>
+
+  <!-- FEATURES -->
+  <h2 class="section-title">
+    ✨ Kenapa Harus Disini?
+  </h2>
+
+  <div class="features-grid">
+
+    <div class="feature-card">
+      <h3>⚡ Cepat</h3>
+      <p>Akun dikirim dalam hitungan menit.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>🔒 Aman</h3>
+      <p>Akun aman dipakai setiap hari.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>📺 Semua Device</h3>
+      <p>HP, TV, Laptop, iPhone, Android.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>🛠 Support</h3>
+      <p>Admin siap bantu jika ada kendala.</p>
+    </div>
 
   </div>
 
@@ -564,10 +694,12 @@ footer{
 
   <div class="testi">
     <div class="stars">★★★★★</div>
+
     <p>
-      “Admin cepat respon, akun aman dan langsung aktif.
-      Recommended banget!”
+      “Admin cepat respon,
+      akun langsung aktif.”
     </p>
+
     <div class="user">
       — Rizky, Jakarta
     </div>
@@ -575,16 +707,36 @@ footer{
 
   <div class="testi">
     <div class="stars">★★★★★</div>
+
     <p>
-      “Harga murah tapi kualitas premium.
-      Sudah langganan 4 bulan.”
+      “Sudah langganan 4 bulan,
+      aman terus.”
     </p>
+
     <div class="user">
       — Dinda, Surabaya
     </div>
   </div>
 
+  <!-- FAQ -->
+  <h2 class="section-title">
+    ❓ FAQ
+  </h2>
 
+  <div class="faq-item">
+    <h3>Aman dipakai?</h3>
+    <p>Ya, aman dan ada garansi replace.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Bisa login di TV?</h3>
+    <p>Bisa di semua Smart TV dan device lainnya.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Proses berapa lama?</h3>
+    <p>1-10 menit setelah pembayaran.</p>
+  </div>
 
   <footer>
     © 2026 Netflix Premium Store
@@ -592,11 +744,11 @@ footer{
 
 </div>
 
-<!-- FLOAT BUTTON -->
+<!-- FLOAT WA -->
 <a
-class="float-wa"
-href="https://wa.me/6282271462909"
-target="_blank"
+  class="float-wa"
+  href="https://wa.me/6282271462909"
+  target="_blank"
 >
 💬
 </a>
@@ -624,7 +776,7 @@ window.addEventListener("load", ()=>{
 
 });
 
-/* FAKE LIVE ORDER */
+/* LIVE ORDER */
 
 const names = [
   "Rizky dari Jakarta",
@@ -644,6 +796,18 @@ setInterval(()=>{
   "🔥 " + random + " baru saja memesan";
 
 },5000);
+
+/* VIEWER */
+
+setInterval(()=>{
+
+  const randomNumber =
+  Math.floor(Math.random()*80)+120;
+
+  document.getElementById("viewerCount").innerHTML =
+  "👀 " + randomNumber + " orang sedang melihat website ini";
+
+},4000);
 
 </script>
 
